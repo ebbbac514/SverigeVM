@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sverige till VM 2026 – Vi är klara!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- CANVAS FÖR KONFETTI -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <span class="nav__flag">🇸🇪</span>
+      <span class="nav__brand">Blågult till VM</span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#match">Matchen</a></li>
+      <li><a href="#potter">Potter</a></li>
+      <li><a href="#gyokeres">Gyökeres</a></li>
+      <li><a href="#historia">Historia</a></li>
+      <li><a href="#vm2026">VM 2026</a></li>
+    </ul>
+    <button class="nav__menu-btn" id="menuBtn" aria-label="Öppna meny">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__mobile" id="mobileNav">
+    <ul>
+      <li><a href="#match" onclick="closeMobileNav()">Matchen</a></li>
+      <li><a href="#potter" onclick="closeMobileNav()">Potter</a></li>
+      <li><a href="#gyokeres" onclick="closeMobileNav()">Gyökeres</a></li>
+      <li><a href="#historia" onclick="closeMobileNav()">Historia</a></li>
+      <li><a href="#vm2026" onclick="closeMobileNav()">VM 2026</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-grid"></div>
+    <div class="hero__stripes">
+      <div class="stripe stripe--1"></div>
+      <div class="stripe stripe--2"></div>
+      <div class="stripe stripe--3"></div>
+    </div>
+
+    <div class="hero__content">
+      <div class="hero__eyebrow reveal">31 MARS 2026 · STRAWBERRY ARENA · STOCKHOLM</div>
+      <h1 class="hero__title reveal reveal--delay-1">
+        <span class="hero__title-we">VI ÄR</span>
+        <span class="hero__title-klara">KLARA</span>
+        <span class="hero__title-flag">🇸🇪</span>
+      </h1>
+      <div class="hero__result reveal reveal--delay-2">
+        <div class="hero__result-team">
+          <div class="hero__result-flag">🇸🇪</div>
+          <div class="hero__result-name">Sverige</div>
+          <div class="hero__result-score">3</div>
+        </div>
+        <div class="hero__result-dash">–</div>
+        <div class="hero__result-team hero__result-team--right">
+          <div class="hero__result-score">2</div>
+          <div class="hero__result-name">Polen</div>
+          <div class="hero__result-flag">🇵🇱</div>
+        </div>
+      </div>
+      <p class="hero__subtitle reveal reveal--delay-3">
+        Gyökeres matchavgörande i 88:e minuten.<br>Sverige till VM för första gången sedan 2018.
+      </p>
+      <a href="#match" class="hero__cta reveal reveal--delay-4">Läs hela historien ↓</a>
+    </div>
+
+    <div class="hero__scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-mouse__wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MATCH-SEKTION ===== -->
+  <section class="section match-section" id="match">
+    <div class="section__header">
+      <div class="section__label">PLAY-OFF FINAL</div>
+      <h2 class="section__title">En kväll för evigheten</h2>
+      <p class="section__intro">
+        Strawberry Arena exploderade. 50 000 fans. En match. Fem mål. Och i slutet
+        —&nbsp;Gyökeres, ännu en gång, som räddade hela Sverige.
+      </p>
+    </div>
+
+    <div class="match-timeline">
+      <!-- Mål 1 -->
+      <div class="goal-card goal-card--swe" data-minute="20'">
+        <div class="goal-card__minute">20'</div>
+        <div class="goal-card__content">
+          <div class="goal-card__scorer">⚽ Anthony Elanga</div>
+          <p class="goal-card__desc">
+            Ayari hittar Elanga i straffområdet – ett fantastiskt förstatouch-skott via ribban sätter Sverige i ledning. Arenan exploderar.
+          </p>
+        </div>
+        <div class="goal-card__flag">🇸🇪 1–0</div>
+      </div>
+
+      <!-- Mål 2 -->
+      <div class="goal-card goal-card--pol" data-minute="33'">
+        <div class="goal-card__minute">33'</div>
+        <div class="goal-card__content">
+          <div class="goal-card__scorer">⚽ Nicola Zalewski</div>
+          <p class="goal-card__desc">
+            Polen tar tillbaka spelet och kvitterar via Zalewski. Matchen öppnar upp sig – nerverna kryper in.
+          </p>
+        </div>
+        <div class="goal-card__flag">🇵🇱 1–1</div>
+      </div>
+
+      <!-- Mål 3 -->
+      <div class="goal-card goal-card--swe" data-minute="44'">
+        <div class="goal-card__minute">44'</div>
+        <div class="goal-card__content">
+          <div class="goal-card__scorer">⚽ Gustaf Lagerbielke</div>
+          <p class="goal-card__desc">
+            Nygrens frispark hittar Lagerbielke vid första stolpen. En distinkt nick ger Sverige ledningen inför halvtid.
+          </p>
+        </div>
+        <div class="goal-card__flag">🇸🇪 2–1</div>
+      </div>
+
+      <!-- Halvtid -->
+      <div class="halftime-divider">— HALVTID: 2–1 —</div>
+
+      <!-- Mål 4 -->
+      <div class="goal-card goal-card--pol" data-minute="55'">
+        <div class="goal-card__minute">55'</div>
+        <div class="goal-card__content">
+          <div class="goal-card__scorer">⚽ Karol Świderski</div>
+          <p class="goal-card__desc">
+            Polen slår tillbaka direkt efter paus. Świderski kvitterar och plötsligt är allt öppet igen. Svettiga händer i hela Sverige.
+          </p>
+        </div>
+        <div class="goal-card__flag">🇵🇱 2–2</div>
+      </div>
+
+      <!-- Buildup till avgörandet -->
+      <div class="tension-bar">
+        <div class="tension-bar__text">⏱ Minuter av ren nerv... Polen tryckte på. Nordfeldt räddade. Sverige överlevde.</div>
+      </div>
+
+      <!-- Mål 5 -->
+      <div class="goal-card goal-card--swe goal-card--winner" data-minute="88'">
+        <div class="goal-card__minute">88'</div>
+        <div class="goal-card__content">
+          <div class="goal-card__scorer">🏆 Viktor Gyökeres</div>
+          <p class="goal-card__desc">
+            Lundgren in på kanten. Svensson skjuter – blockerat. Bergvall testar – returen. Zeneli lobbar – stolpen. Och Gyökeres, alltid där, sätter in returen upp i taket. <strong>Mål. Sverige till VM.</strong>
+          </p>
+        </div>
+        <div class="goal-card__flag">🇸🇪 3–2 KLART!</div>
+      </div>
+    </div>
+
+    <blockquote class="match-quote">
+      <p>"Det betyder allt. Det har alltid varit en dröm. Och att få göra det på det här sättet..."</p>
+      <cite>— Viktor Gyökeres efter matchen</cite>
+    </blockquote>
+  </section>
+
+  <!-- ===== POTTER-SEKTION ===== -->
+  <section class="section potter-section" id="potter">
+    <div class="potter-bg"></div>
+    <div class="potter-content">
+      <div class="potter-text">
+        <div class="section__label">HYLLNING</div>
+        <h2 class="potter-title">Graham<br /><em>Potter</em></h2>
+        <div class="potter-subtitle">Mannen som vände allt</div>
+
+        <p class="potter-body">
+          När Jon Dahl Tomasson sparkades i höstas var läget mörkt. Sverige låg sist i kvalgruppen. 
+          Noll poäng på tre matcher. Ingen trodde på ett VM.
+        </p>
+        <p class="potter-body">
+          In klev Graham Potter – engelsman med ett förflutet i just Sverige, från Östersunds FK – 
+          och satte omedelbart en modern, spelande prägel på Blågult. På bara tre matcher 
+          omvandlade han ett brutet lag till en maskin.
+        </p>
+        <p class="potter-body">
+          Ukraina. 3–1. Polen. 3–2. VM-klar.
+        </p>
+        <p class="potter-body">
+          "Det är tufft att beskriva på engelska. En otrolig kväll. All cred till spelarna 
+          som löste det", sa han direkt efter slutsignalen – lugn, taktfast, som alltid.
+        </p>
+
+        <div class="potter-stats">
+          <div class="potter-stat">
+            <div class="potter-stat__num">3</div>
+            <div class="potter-stat__label">Matcher som förbundskapten</div>
+          </div>
+          <div class="potter-stat">
+            <div class="potter-stat__num">3</div>
+            <div class="potter-stat__label">Vinster</div>
+          </div>
+          <div class="potter-stat">
+            <div class="potter-stat__num">9</div>
+            <div class="potter-stat__label">Mål gjorda</div>
+          </div>
+          <div class="potter-stat">
+            <div class="potter-stat__num">1</div>
+            <div class="potter-stat__label">VM-biljett</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="potter-visual">
+        <div class="potter-card">
+          <div class="potter-card__img-wrap">
+            <div class="potter-card__silhouette">
+              <svg viewBox="0 0 200 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="55" r="38" fill="rgba(245,197,24,0.15)" stroke="#F5C518" stroke-width="1.5"/>
+                <ellipse cx="100" cy="200" rx="65" ry="75" fill="rgba(0,106,167,0.12)" stroke="#006AA7" stroke-width="1.5"/>
+                <text x="100" y="62" text-anchor="middle" font-family="Playfair Display" font-size="26" fill="#F5C518">GP</text>
+              </svg>
+            </div>
+          </div>
+          <div class="potter-card__label">GRAHAM POTTER</div>
+          <div class="potter-card__role">Förbundskapten</div>
+          <div class="potter-card__tag">🇬🇧 Engelsman • Ex-Östersunds FK</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GYÖKERES-SEKTION ===== -->
+  <section class="section gyokeres-section" id="gyokeres">
+    <div class="gyokeres-header">
+      <div class="section__label">HJÄLTEN</div>
+      <h2 class="gyokeres-title">Viktor<br /><em>Gyökeres</em></h2>
+    </div>
+
+    <div class="gyokeres-body">
+      <div class="gyokeres-stats-grid">
+        <div class="gstat gstat--big">
+          <div class="gstat__num">4</div>
+          <div class="gstat__label">Mål i playoffen</div>
+        </div>
+        <div class="gstat">
+          <div class="gstat__num">88'</div>
+          <div class="gstat__label">Matchvinnaren vs Polen</div>
+        </div>
+        <div class="gstat">
+          <div class="gstat__num">3</div>
+          <div class="gstat__label">Hattrick vs Ukraina</div>
+        </div>
+        <div class="gstat">
+          <div class="gstat__num">⚡</div>
+          <div class="gstat__label">Arsenal · Premier League</div>
+        </div>
+      </div>
+
+      <div class="gyokeres-text">
+        <p>
+          Ukraina. 6:e minuten. Gyökeres. Mål. Det tog sex minuter innan spelet var avgjort i praktiken. 
+          Han adderade ytterligare två och fullbordade ett hattrick som lär minnas i decennier.
+        </p>
+        <p>
+          Mot Polen var det ännu hårdare. Polen pressade, kvitterade, tryckte på. Och i den 
+          88:e minuten – när hela Sverige höll andan – var det återigen han. 
+          Returen. Upp i taket. Mål. 3–2.
+        </p>
+        <p>
+          "Jag är så tacksam, stolt över laget och svensk fotboll." Orden från en man som inte 
+          bara bar upp laget – han lyfte hela ett folk.
+        </p>
+
+        <div class="goals-replay">
+          <div class="replay-goal">
+            <span class="replay-min">6'</span>
+            <span class="replay-desc">⚽ vs Ukraina – öppningsmålet</span>
+          </div>
+          <div class="replay-goal">
+            <span class="replay-min">51'</span>
+            <span class="replay-desc">⚽ vs Ukraina – 2–0</span>
+          </div>
+          <div class="replay-goal">
+            <span class="replay-min">73'</span>
+            <span class="replay-desc">⚽ vs Ukraina – hattrick</span>
+          </div>
+          <div class="replay-goal replay-goal--final">
+            <span class="replay-min">88'</span>
+            <span class="replay-desc">🏆 vs Polen – VM-målet</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gyokeres-quote-wrap">
+      <blockquote class="gyokeres-quote">
+        "Alltid följ bollen i straffområdet."
+        <cite>— Gyökeres, implicit i varje match</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ===== HISTORIK-SEKTION ===== -->
+  <section class="section historia-section" id="historia">
+    <div class="section__header">
+      <div class="section__label">NOSTALGI</div>
+      <h2 class="section__title">Blågult genom tiderna</h2>
+      <p class="section__intro">
+        2026 skriver vi ett nytt kapitel. Men vägen hit är paved med storslagna minnen.
+      </p>
+    </div>
+
+    <div class="timeline">
+
+      <!-- 1958 -->
+      <div class="timeline-item timeline-item--left reveal-left">
+        <div class="timeline-year">1958</div>
+        <div class="timeline-card">
+          <div class="timeline-card__badge">🥈 SILVER</div>
+          <h3 class="timeline-card__title">VM-finalen på hemmaplan</h3>
+          <div class="timeline-card__location">📍 Sverige</div>
+          <p class="timeline-card__body">
+            Den största bedriften i svensk fotbollshistoria. Sverige som värdnation tog sig 
+            hela vägen till finalen. Brazilien, med den unge Pelé, vann med 5–2 – men 
+            Sverige hade spelat in sig i nationens hjärta för evigt. 
+            Nils Liedholm och Gunnar Gren ledde ett lag som trollband en hel värld.
+          </p>
+          <div class="timeline-card__players">
+            <span class="player-tag">Nils Liedholm</span>
+            <span class="player-tag">Gunnar Gren</span>
+            <span class="player-tag">Kurt Hamrin</span>
+          </div>
+        </div>
+        <div class="timeline-line"></div>
+      </div>
+
+      <!-- 1994 -->
+      <div class="timeline-item timeline-item--right reveal-right">
+        <div class="timeline-year">1994</div>
+        <div class="timeline-card">
+          <div class="timeline-card__badge">🥉 BRONS</div>
+          <h3 class="timeline-card__title">Sommaren som aldrig glöms</h3>
+          <div class="timeline-card__location">📍 USA</div>
+          <p class="timeline-card__body">
+            VM i USA 1994 är kanske den mest älskade sommaren i modern svensk fotbollshistoria. 
+            Tomas Brolin, Martin Dahlin, Henrik Larsson – ett lag fullt av stjärnor som tog 
+            Sverige till bronsmedal. Segern mot Bulgarien (4–0) och semifinalmatchen mot Brasilien 
+            lever kvar i folkminnet. Kennet Anderssons kvittering – när klockan var slut och 
+            hoppet var borta – ett av de mest ikoniska ögonblicken i blågult.
+          </p>
+          <div class="timeline-card__players">
+            <span class="player-tag">Tomas Brolin</span>
+            <span class="player-tag">Martin Dahlin</span>
+            <span class="player-tag">Kennet Andersson</span>
+            <span class="player-tag">Henrik Larsson</span>
+          </div>
+        </div>
+        <div class="timeline-line"></div>
+      </div>
+
+      <!-- 2006 -->
+      <div class="timeline-item timeline-item--left reveal-left">
+        <div class="timeline-year">2006</div>
+        <div class="timeline-card">
+          <div class="timeline-card__badge">🏆 ÅTTONDELSFINAL</div>
+          <h3 class="timeline-card__title">Zlatan vaknar i Tyskland</h3>
+          <div class="timeline-card__location">📍 Tyskland</div>
+          <p class="timeline-card__body">
+            VM i Tyskland markerade Zlatan Ibrahimovićs genombrott på allvar i ett VM-sammanhang. 
+            Sverige gick vidare från gruppen men mötte ett brinnande Tyskland i åttondelsfinalen 
+            och förlorade 2–0. Det var ändå ett VM där grunden lades för något större – en 
+            generation med Zlatan i spetsen som snart skulle dominera europisk fotboll.
+          </p>
+          <div class="timeline-card__players">
+            <span class="player-tag">Zlatan Ibrahimović</span>
+            <span class="player-tag">Freddie Ljungberg</span>
+            <span class="player-tag">Henrik Larsson</span>
+          </div>
+        </div>
+        <div class="timeline-line"></div>
+      </div>
+
+      <!-- 2018 -->
+      <div class="timeline-item timeline-item--right reveal-right">
+        <div class="timeline-year">2018</div>
+        <div class="timeline-card">
+          <div class="timeline-card__badge">⚡ KVARTSFINAL</div>
+          <h3 class="timeline-card__title">Utan Zlatan – ändå längst</h3>
+          <div class="timeline-card__location">📍 Ryssland</div>
+          <p class="timeline-card__body">
+            Det som inte borde kunna hända hände ändå. Sverige, utan sin största stjärna Zlatan, 
+            spelade sig till en kvartsfinal i Ryssland. Andreas Granqvist som kapten och pålitlig klippa. 
+            Emil Forsberg som kreativ motor. Victor Lindelöf som framtidslöftet. 
+            Vinsten mot Schweiz i åttondelsfinalen visade ett Sverige med hjärta och 
+            laganda. England i kvartsfinalen satte punkt – men resan var ett under.
+          </p>
+          <div class="timeline-card__players">
+            <span class="player-tag">Andreas Granqvist</span>
+            <span class="player-tag">Emil Forsberg</span>
+            <span class="player-tag">Victor Lindelöf</span>
+            <span class="player-tag">Robin Olsen</span>
+          </div>
+        </div>
+        <div class="timeline-line"></div>
+      </div>
+
+      <!-- 2026 -->
+      <div class="timeline-item timeline-item--center">
+        <div class="timeline-year timeline-year--now">2026</div>
+        <div class="timeline-card timeline-card--now">
+          <div class="timeline-card__badge timeline-card__badge--gold">🌎 VM I USA</div>
+          <h3 class="timeline-card__title">Vår tid är nu</h3>
+          <div class="timeline-card__location">📍 USA · Kanada · Mexiko</div>
+          <p class="timeline-card__body">
+            Efter 8 år borta. Efter ett katastrofalt gruppspel med noll poäng. 
+            Genom Nations League-nåskalans nöd – och via Potter och Gyökeres genialitet 
+            – är Sverige tillbaka på världsscenen. 
+            Grupp F. Nederländerna. Japan. Tunisien. 
+            <strong>Dröm stort, Blågult.</strong>
+          </p>
+          <div class="timeline-card__players">
+            <span class="player-tag">Viktor Gyökeres</span>
+            <span class="player-tag">Anthony Elanga</span>
+            <span class="player-tag">Victor Lindelöf</span>
+            <span class="player-tag">Lucas Bergvall</span>
+            <span class="player-tag">Yasin Ayari</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== VM 2026-SEKTION ===== -->
+  <section class="section vm-section" id="vm2026">
+    <div class="section__header">
+      <div class="section__label">NÄSTA KAPITEL</div>
+      <h2 class="section__title">VM 2026 – Grupp F</h2>
+      <p class="section__intro">
+        Sverige spelar i Grupp F. Turneringen startar 11 juni i USA, Kanada och Mexiko.
+        Finalen spelas 19 juli på MetLife Stadium i New York.
+      </p>
+    </div>
+
+    <div class="group-table">
+      <div class="group-table__header">Grupp F</div>
+      <div class="group-match">
+        <div class="group-match__date">15 juni</div>
+        <div class="group-match__teams">
+          <span class="group-match__team group-match__team--swe">🇸🇪 Sverige</span>
+          <span class="group-match__vs">vs</span>
+          <span class="group-match__team">🇳🇱 Nederländerna</span>
+        </div>
+      </div>
+      <div class="group-match">
+        <div class="group-match__date">20 juni</div>
+        <div class="group-match__teams">
+          <span class="group-match__team group-match__team--swe">🇸🇪 Sverige</span>
+          <span class="group-match__vs">vs</span>
+          <span class="group-match__team">🇯🇵 Japan</span>
+        </div>
+      </div>
+      <div class="group-match">
+        <div class="group-match__date">26 juni</div>
+        <div class="group-match__teams">
+          <span class="group-match__team group-match__team--swe">🇸🇪 Sverige</span>
+          <span class="group-match__vs">vs</span>
+          <span class="group-match__team">🇹🇳 Tunisien</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="vm-cta-wrap">
+      <div class="vm-tagline">
+        Det är vår tur. Det är vår tid. <strong>Heja Sverige. 🇸🇪</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__flag">🇸🇪</div>
+    <div class="footer__title">Sverige till VM 2026</div>
+    <p class="footer__sub">En hyllning till laget, ledaren och legenden.<br />
+    Byggd med stolthet natten efter den 31 mars 2026.</p>
+    <div class="footer__sep">· · ·</div>
+    <p class="footer__copy">Heja Sverige, alltid och för alltid.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
